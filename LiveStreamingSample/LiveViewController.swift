@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LiveViewController.swift
 //  LiveStreamingSample
 //
 //  Created by kohey on 2015/07/18.
@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LiveViewController: UIViewController {
 
-    @IBOutlet weak var rightBarButton: UIBarButtonItem!
+    
+    @IBOutlet weak var closeBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

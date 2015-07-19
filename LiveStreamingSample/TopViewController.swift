@@ -10,12 +10,13 @@ import UIKit
 
 class TopViewController: UIViewController {
 
-
-    @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    var thumbPosition:CGFloat = 100
+    var livesArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.getThumbnails()
         //self.thumbnail.backgroundColor = UIColor.redColor()
         // Do any additional setup after loading the view.
     }
@@ -53,24 +54,66 @@ class TopViewController: UIViewController {
             })
     }
     
-    private func getThumbnails() -> Void {
-        ApiFetcher().getLives { (responseObject:NSDictionary?, error:NSError?) -> Void in            
+    // ココはクロージャーで書ける
+    private func getThumbnails() {
+        ApiFetcher().getLives { (responseObject: NSDictionary?, error:NSError?) -> Void in
             // View作成
-            /*
-            let results = responseObject as! NSMutableDictionary
-            println(results["results"][0]["thumnail"])
-            let url = NSURL(string: results[0]["thumbnail"]);
-            var err: NSError?
-            var imageData = NSData(contentsOfURL: url!,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!
-            
-            if err == nil {
-                self.thumbnail.image = UIImage(data:imageData)
-            } else {
-                println(err)
+            self.livesArray = responseObject!["result"] as! NSArray
+            for dic in self.livesArray {
+                let thumbURL = dic["thumbnail"] as! NSString
+                let url = NSURL(string: thumbURL as String)
+                var err: NSError?
+                var imageData = NSData(contentsOfURL: url!,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!
+                //println(thumbURL)
+                if err == nil {
+                    let img = UIImage(data:imageData)
+                    self.initThumbnail(img!)
+                } else {
+                    println(err)
+                }
             }
-        }*/
         }
     }
+    
+    private func initThumbnail(img: UIImage) {
+        let thumbImageView = UIImageView(frame: CGRectMake(0,0,380,200))
+        thumbImageView.image = img
+        thumbImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: self.thumbPosition)
+        
+        self.thumbPosition = self.thumbPosition + 250.0
+        self.scrollView.contentSize = CGSizeMake(240, self.scrollView.contentSize.height + 250)
+        
+        thumbImageView.userInteractionEnabled = true
+        var myTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapGesture:")
+        thumbImageView.addGestureRecognizer(myTap)
+        self.scrollView.addSubview(thumbImageView)
+
+    }
+    
+    
+    func tapGesture(sender:UITapGestureRecognizer){
+        //let liveViewCtrl: UIViewController = PlayerViewController()
+        //let liveViewCtrl: UIViewController = LiveViewController()
+        //liveViewCtrl.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
+        // Viewの移動する.
+        //self.presentViewController(liveViewCtrl, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(liveViewCtrl, animated: true)
+        //self.delegate.setLive("https://d29xsu8h6iusrj.cloudfront.net/livestreamingsample/wkpap0vs3j6x/5917fb99-ccec-4b74-9d57-46250b481634/index.m3u8")
+        performSegueWithIdentifier("playerSegue", sender: self)
+        
+        
+    }
+    
+    /*
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "playerSegue") {
+            // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
+            var secondView : PlayerViewController = segue.destinationViewController as! PlayerViewController
+            //secondView._second = _param
+        }
+    }*/
+
+    // 回転禁止
     /*
     // MARK: - Navigation
 

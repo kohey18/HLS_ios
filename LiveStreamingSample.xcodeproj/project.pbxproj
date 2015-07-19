@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		543FBD881B5B8F50001AC410 /* ApiFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543FBD871B5B8F50001AC410 /* ApiFetcher.swift */; };
+		543FBD8E1B5C12D6001AC410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543FBD8C1B5C12D6001AC410 /* Main.storyboard */; };
 		54D2F1E31B5A50980085E390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2F1E21B5A50980085E390 /* AppDelegate.swift */; };
-		54D2F1E51B5A50980085E390 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2F1E41B5A50980085E390 /* ViewController.swift */; };
+		54D2F1E51B5A50980085E390 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2F1E41B5A50980085E390 /* LiveViewController.swift */; };
 		54D2F1EA1B5A50980085E390 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54D2F1E91B5A50980085E390 /* Images.xcassets */; };
 		54D2F1ED1B5A50980085E390 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D2F1EB1B5A50980085E390 /* LaunchScreen.xib */; };
 		54D2F1F91B5A50980085E390 /* LiveStreamingSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2F1F81B5A50980085E390 /* LiveStreamingSampleTests.swift */; };
 		54D2F2071B5A57400085E390 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D2F2061B5A57400085E390 /* AVKit.framework */; };
 		54D2F2091B5A57D40085E390 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2F2081B5A57D40085E390 /* PlayerViewController.swift */; };
 		54D2F20B1B5A5BA30085E390 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D2F20A1B5A5BA30085E390 /* TopViewController.swift */; };
-		54D2F20F1B5B397C0085E390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D2F20D1B5B397C0085E390 /* Main.storyboard */; };
 		54D2F2121B5B4BDC0085E390 /* video_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D2F2111B5B4BDC0085E390 /* video_button.png */; };
 		9E3675C8A7E703CCB9E7CA08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3640DDEB0325AD4886D6F7 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -36,10 +36,11 @@
 		41DD77745378F90FD07399D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		543FBD831B5B6E4B001AC410 /* KFSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KFSecrets.h; sourceTree = "<group>"; };
 		543FBD871B5B8F50001AC410 /* ApiFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiFetcher.swift; sourceTree = "<group>"; };
+		543FBD8D1B5C12D6001AC410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54D2F1DD1B5A50980085E390 /* LiveStreamingSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveStreamingSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D2F1E11B5A50980085E390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54D2F1E21B5A50980085E390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		54D2F1E41B5A50980085E390 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54D2F1E41B5A50980085E390 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		54D2F1E91B5A50980085E390 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		54D2F1EC1B5A50980085E390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		54D2F1F21B5A50980085E390 /* LiveStreamingSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveStreamingSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +49,6 @@
 		54D2F2061B5A57400085E390 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		54D2F2081B5A57D40085E390 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		54D2F20A1B5A5BA30085E390 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
-		54D2F20E1B5B397C0085E390 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54D2F2111B5B4BDC0085E390 /* video_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_button.png; sourceTree = "<group>"; };
 		54F395AD1B5B6B0900FD398A /* LiveStreamingSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LiveStreamingSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		DC182099446FD94F055E167A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,10 +118,10 @@
 				543FBD861B5B8F1A001AC410 /* API */,
 				54D2F2101B5B4BD00085E390 /* images */,
 				54D2F1E21B5A50980085E390 /* AppDelegate.swift */,
-				54D2F1E41B5A50980085E390 /* ViewController.swift */,
+				54D2F1E41B5A50980085E390 /* LiveViewController.swift */,
 				54D2F1E91B5A50980085E390 /* Images.xcassets */,
 				54D2F1EB1B5A50980085E390 /* LaunchScreen.xib */,
-				54D2F20D1B5B397C0085E390 /* Main.storyboard */,
+				543FBD8C1B5C12D6001AC410 /* Main.storyboard */,
 				54D2F1E01B5A50980085E390 /* Supporting Files */,
 				54D2F2081B5A57D40085E390 /* PlayerViewController.swift */,
 				54D2F20A1B5A5BA30085E390 /* TopViewController.swift */,
@@ -255,10 +255,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54D2F20F1B5B397C0085E390 /* Main.storyboard in Resources */,
 				54D2F2121B5B4BDC0085E390 /* video_button.png in Resources */,
 				54D2F1ED1B5A50980085E390 /* LaunchScreen.xib in Resources */,
 				54D2F1EA1B5A50980085E390 /* Images.xcassets in Resources */,
+				543FBD8E1B5C12D6001AC410 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +311,7 @@
 			files = (
 				543FBD881B5B8F50001AC410 /* ApiFetcher.swift in Sources */,
 				54D2F20B1B5A5BA30085E390 /* TopViewController.swift in Sources */,
-				54D2F1E51B5A50980085E390 /* ViewController.swift in Sources */,
+				54D2F1E51B5A50980085E390 /* LiveViewController.swift in Sources */,
 				54D2F2091B5A57D40085E390 /* PlayerViewController.swift in Sources */,
 				54D2F1E31B5A50980085E390 /* AppDelegate.swift in Sources */,
 			);
@@ -336,20 +336,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		543FBD8C1B5C12D6001AC410 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				543FBD8D1B5C12D6001AC410 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		54D2F1EB1B5A50980085E390 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				54D2F1EC1B5A50980085E390 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		54D2F20D1B5B397C0085E390 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				54D2F20E1B5B397C0085E390 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
