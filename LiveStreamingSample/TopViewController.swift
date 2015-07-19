@@ -92,26 +92,15 @@ class TopViewController: UIViewController {
     
     
     func tapGesture(sender:UITapGestureRecognizer){
-        //let liveViewCtrl: UIViewController = PlayerViewController()
-        //let liveViewCtrl: UIViewController = LiveViewController()
-        //liveViewCtrl.modalTransitionStyle = UIModalTransitionStyle.CoverVertical
-        // Viewの移動する.
-        //self.presentViewController(liveViewCtrl, animated: true, completion: nil)
-        //self.navigationController?.pushViewController(liveViewCtrl, animated: true)
-        //self.delegate.setLive("https://d29xsu8h6iusrj.cloudfront.net/livestreamingsample/wkpap0vs3j6x/5917fb99-ccec-4b74-9d57-46250b481634/index.m3u8")
         performSegueWithIdentifier("playerSegue", sender: self)
-        
-        
     }
     
-    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "playerSegue") {
-            // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
-            var secondView : PlayerViewController = segue.destinationViewController as! PlayerViewController
-            //secondView._second = _param
+            let secondView: PlayerViewController = segue.destinationViewController as! PlayerViewController
+            secondView._liveURL = "https://d29xsu8h6iusrj.cloudfront.net/livestreamingsample/wkpap0vs3j6x/5917fb99-ccec-4b74-9d57-46250b481634/index.m3u8"
         }
-    }*/
+    }
 
     // 回転禁止
     /*

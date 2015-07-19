@@ -12,8 +12,12 @@ import AVFoundation
 
 class PlayerViewController: AVPlayerViewController {
     
+    var _liveURL:NSString = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        println(_liveURL)
+        setLive(_liveURL)
         // Do any additional setup after loading the view, typically from a nib.
     }
     

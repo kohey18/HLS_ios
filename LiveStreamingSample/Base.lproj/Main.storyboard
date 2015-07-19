@@ -73,7 +73,7 @@
                 </avPlayerViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhE-vy-tJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975" y="36"/>
+            <point key="canvasLocation" x="366.5" y="1191.5"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="VkC-Ly-NtJ">
@@ -106,7 +106,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="scrollView" destination="TTW-ou-pJy" id="Kej-6c-xcX"/>
-                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="playerSegue" id="Hxf-J1-rzi"/>
+                        <segue destination="cNe-Nq-O12" kind="modal" identifier="playerSegue" id="Wa7-Ga-HVZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgr-LZ-sba" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -117,4 +117,7 @@
     <resources>
         <image name="video_button.png" width="604" height="416"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Wa7-Ga-HVZ"/>
+    </inferredMetricsTieBreakers>
 </document>
