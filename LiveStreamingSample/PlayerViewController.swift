@@ -16,18 +16,7 @@ class PlayerViewController: AVPlayerViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(_liveURL)
         setLive(_liveURL)
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        /*
-        if segue.identifier == "playerSegue" {
-            var senderViewController:TopViewController = segue.destinationViewController as TopViewController
-            senderViewController.delegate = self
-        }*/
-        
     }
     
     override func didReceiveMemoryWarning() {

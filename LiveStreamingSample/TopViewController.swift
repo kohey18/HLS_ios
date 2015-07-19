@@ -11,13 +11,13 @@ import UIKit
 class TopViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    
     var thumbPosition:CGFloat = 100
     var livesArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getThumbnails()
-        //self.thumbnail.backgroundColor = UIColor.redColor()
         // Do any additional setup after loading the view.
     }
 
@@ -59,15 +59,15 @@ class TopViewController: UIViewController {
         ApiFetcher().getLives { (responseObject: NSDictionary?, error:NSError?) -> Void in
             // View作成
             self.livesArray = responseObject!["result"] as! NSArray
-            for dic in self.livesArray {
+            for (index,dic) in enumerate(self.livesArray) {
                 let thumbURL = dic["thumbnail"] as! NSString
                 let url = NSURL(string: thumbURL as String)
                 var err: NSError?
                 var imageData = NSData(contentsOfURL: url!,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!
-                //println(thumbURL)
+                
                 if err == nil {
                     let img = UIImage(data:imageData)
-                    self.initThumbnail(img!)
+                    self.initThumbnail(img!, tag: index)
                 } else {
                     println(err)
                 }
@@ -75,7 +75,7 @@ class TopViewController: UIViewController {
         }
     }
     
-    private func initThumbnail(img: UIImage) {
+    private func initThumbnail(img: UIImage, tag: NSInteger) {
         let thumbImageView = UIImageView(frame: CGRectMake(0,0,380,200))
         thumbImageView.image = img
         thumbImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: self.thumbPosition)
@@ -84,33 +84,23 @@ class TopViewController: UIViewController {
         self.scrollView.contentSize = CGSizeMake(240, self.scrollView.contentSize.height + 250)
         
         thumbImageView.userInteractionEnabled = true
+        thumbImageView.tag = tag
         var myTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapGesture:")
         thumbImageView.addGestureRecognizer(myTap)
         self.scrollView.addSubview(thumbImageView)
-
     }
     
-    
-    func tapGesture(sender:UITapGestureRecognizer){
-        performSegueWithIdentifier("playerSegue", sender: self)
+    func tapGesture(sender:UITapGestureRecognizer) {
+        performSegueWithIdentifier("playerSegue", sender: sender)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "playerSegue") {
+            let img = sender.view as! UIImageView
+            let url = self.livesArray[img.tag]["file"] as! NSString
             let secondView: PlayerViewController = segue.destinationViewController as! PlayerViewController
-            secondView._liveURL = "https://d29xsu8h6iusrj.cloudfront.net/livestreamingsample/wkpap0vs3j6x/5917fb99-ccec-4b74-9d57-46250b481634/index.m3u8"
+            secondView._liveURL = url
         }
     }
-
-    // 回転禁止
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
