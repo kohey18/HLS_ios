@@ -26,9 +26,9 @@ class PlayerViewController: AVPlayerViewController {
     
     func setLive(liveUrl: NSString) {
         let url = NSURL(string: liveUrl as String)
-        let playerItem = AVPlayerItem(URL: url)
+        let playerItem = AVPlayerItem(URL: url!)
         let player = AVPlayer(playerItem: playerItem)
         self.player = player
-        self.player.play()
+        self.player!.play()
     }
 }

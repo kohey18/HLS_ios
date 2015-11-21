@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "54D2F1DC1B5A50980085E390"
-               BuildableName = "LiveStreamingSample.app"
-               BlueprintName = "LiveStreamingSample"
-               ReferencedContainer = "container:LiveStreamingSample.xcodeproj">
+               BuildableName = "GNChannel.app"
+               BlueprintName = "GNChannel"
+               ReferencedContainer = "container:GNChannel.temp_caseinsensitive_rename.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,27 +29,27 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "54D2F1F11B5A50980085E390"
-               BuildableName = "LiveStreamingSampleTests.xctest"
-               BlueprintName = "LiveStreamingSampleTests"
-               ReferencedContainer = "container:LiveStreamingSample.xcodeproj">
+               BuildableName = "GNChannel.xctest"
+               BlueprintName = "GNChannelTests"
+               ReferencedContainer = "container:GNChannel.temp_caseinsensitive_rename.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "54D2F1F11B5A50980085E390"
-               BuildableName = "LiveStreamingSampleTests.xctest"
-               BlueprintName = "LiveStreamingSampleTests"
-               ReferencedContainer = "container:LiveStreamingSample.xcodeproj">
+               BuildableName = "GNChannel.xctest"
+               BlueprintName = "GNChannelTests"
+               ReferencedContainer = "container:GNChannel.temp_caseinsensitive_rename.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,48 +57,51 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "54D2F1DC1B5A50980085E390"
-            BuildableName = "LiveStreamingSample.app"
-            BlueprintName = "LiveStreamingSample"
-            ReferencedContainer = "container:LiveStreamingSample.xcodeproj">
+            BuildableName = "GNChannel.app"
+            BlueprintName = "GNChannel"
+            ReferencedContainer = "container:GNChannel.temp_caseinsensitive_rename.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "54D2F1DC1B5A50980085E390"
-            BuildableName = "LiveStreamingSample.app"
-            BlueprintName = "LiveStreamingSample"
-            ReferencedContainer = "container:LiveStreamingSample.xcodeproj">
+            BuildableName = "GNChannel.app"
+            BlueprintName = "GNChannel"
+            ReferencedContainer = "container:GNChannel.temp_caseinsensitive_rename.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
+      buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "54D2F1DC1B5A50980085E390"
-            BuildableName = "LiveStreamingSample.app"
-            BlueprintName = "LiveStreamingSample"
-            ReferencedContainer = "container:LiveStreamingSample.xcodeproj">
+            BuildableName = "GNChannel.app"
+            BlueprintName = "GNChannel"
+            ReferencedContainer = "container:GNChannel.temp_caseinsensitive_rename.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -12,12 +12,25 @@ class TopViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var broadcastBtn: UIButton!
+    @IBOutlet weak var watchBtn: UIButton!
     var thumbPosition:CGFloat = 100
     var livesArray = []
     
     override func viewDidLoad() {
+        
+        self.navigationController?.navigationBarHidden = true
+        
+        self.view.backgroundColor = UIColor.blackColor()
+        self.broadcastBtn.backgroundColor = UIColor.yellowColor()
+        self.watchBtn.backgroundColor = UIColor.yellowColor()
+        
+        self.broadcastBtn.layer.cornerRadius = 10.0
+        self.watchBtn.layer.cornerRadius = 10.0
+        self.broadcastBtn.clipsToBounds = true
+        self.watchBtn.clipsToBounds = true
+        
         super.viewDidLoad()
-        self.getThumbnails()
         // Do any additional setup after loading the view.
     }
 
@@ -26,54 +39,38 @@ class TopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    
+    /*
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         performSegueWithIdentifier("playerView", sender: nil)
-    }
+    }*/
     
     @IBAction func startLive() {
         Kickflip.presentBroadcasterFromViewController(self, ready: { stream in
-            let mStream:KFStream = stream
-            
-            if mStream.streamURL != nil {
-                println("Stream is ready at URL: %@", mStream.streamURL.absoluteString);
+            if stream.streamURL != nil {
+                print("Stream is ready at URL: %@", stream.streamURL.absoluteString);
                 let dic: NSDictionary =
                 [
-                    "file": mStream.streamURL,
-                    "thumbnail": mStream.thumbnailURL,
+                    "file": stream.streamURL,
+                    "thumbnail": stream.thumbnailURL,
                 ]
                 ApiFetcher().postLive(dic)
             } else {
-                println("error")
+                print("error")
             }
             }, completion: { success, error in
                 if error != nil {
-                   println("Error setup stream")
+                   print("Error setup stream")
                 } else {
-                    println("DONE boardcasting")
+                    print("DONE boardcasting")
                 }
             })
     }
     
-    // ココはクロージャーで書ける
-    private func getThumbnails() {
-        ApiFetcher().getLives { (responseObject: NSDictionary?, error:NSError?) -> Void in
-            // View作成
-            self.livesArray = responseObject!["result"] as! NSArray
-            for (index,dic) in enumerate(self.livesArray) {
-                let thumbURL = dic["thumbnail"] as! NSString
-                let url = NSURL(string: thumbURL as String)
-                var err: NSError?
-                var imageData = NSData(contentsOfURL: url!,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)!
-                
-                if err == nil {
-                    let img = UIImage(data:imageData)
-                    self.initThumbnail(img!, tag: index)
-                } else {
-                    println(err)
-                }
-            }
-        }
-    }
     
     private func initThumbnail(img: UIImage, tag: NSInteger) {
         let thumbImageView = UIImageView(frame: CGRectMake(0,0,380,200))
@@ -90,17 +87,4 @@ class TopViewController: UIViewController {
         self.scrollView.addSubview(thumbImageView)
     }
     
-    func tapGesture(sender:UITapGestureRecognizer) {
-        performSegueWithIdentifier("playerSegue", sender: sender)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "playerSegue") {
-            let img = sender.view as! UIImageView
-            let url = self.livesArray[img.tag]["file"] as! NSString
-            let secondView: PlayerViewController = segue.destinationViewController as! PlayerViewController
-            secondView._liveURL = url
-        }
-    }
-
 }
