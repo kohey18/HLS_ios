@@ -25,6 +25,7 @@
 		5420BBE21C00E36900294D99 /* LiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBE11C00E36900294D99 /* LiveViewController.storyboard */; };
 		5420BBE41C00E38F00294D99 /* PlayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBE31C00E38F00294D99 /* PlayerViewController.storyboard */; };
 		5420BBE71C00E9B300294D99 /* UIColor+GNChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */; };
+		54A2A7451C019F8D001C6BA7 /* BroadCastView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A2A7441C019F8D001C6BA7 /* BroadCastView.storyboard */; };
 		54B3587F1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */; };
 		54B358811C018F6F00A5DDA9 /* BroadCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */; };
 		54D2F2071B5A57400085E390 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D2F2061B5A57400085E390 /* AVKit.framework */; };
@@ -65,6 +66,7 @@
 		5420BBE11C00E36900294D99 /* LiveViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LiveViewController.storyboard; sourceTree = SOURCE_ROOT; };
 		5420BBE31C00E38F00294D99 /* PlayerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerViewController.storyboard; sourceTree = SOURCE_ROOT; };
 		5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+GNChannel.swift"; sourceTree = SOURCE_ROOT; };
+		54A2A7441C019F8D001C6BA7 /* BroadCastView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BroadCastView.storyboard; sourceTree = SOURCE_ROOT; };
 		54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryBoard.swift"; sourceTree = SOURCE_ROOT; };
 		54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroadCastViewController.swift; sourceTree = SOURCE_ROOT; };
 		54D2F1DD1B5A50980085E390 /* GNChannel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GNChannel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */,
+				54A2A7441C019F8D001C6BA7 /* BroadCastView.storyboard */,
 			);
 			name = BroadCastViewController;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5420BBBD1C00D10000294D99 /* Images.xcassets in Resources */,
+				54A2A7451C019F8D001C6BA7 /* BroadCastView.storyboard in Resources */,
 				5420BBC31C00D14D00294D99 /* Info.plist in Resources */,
 				5420BBE21C00E36900294D99 /* LiveViewController.storyboard in Resources */,
 				5420BBE41C00E38F00294D99 /* PlayerViewController.storyboard in Resources */,

@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class LiveStreamingSampleTests: XCTestCase {
+class GNChannelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -1,6 +1,6 @@
 //
 //  WeekProgram.swift
-//  LiveStreamingSample
+//  GNChannel
 //
 //  Created by kohey on 2015/11/20.
 //  Copyright © 2015年 kohey. All rights reserved.

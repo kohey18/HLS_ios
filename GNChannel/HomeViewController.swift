@@ -1,6 +1,6 @@
 //
 //  HomeViewController.swift
-//  LiveStreamingSample
+//  GNChannel
 //
 //  Created by kohey on 2015/07/18.
 //  Copyright (c) 2015年 kohey. All rights reserved.
@@ -54,32 +54,15 @@ class HomeViewController: UIViewController {
     }*/
     
     @IBAction func startLive() {
-        Kickflip.presentBroadcasterFromViewController(self, ready: { stream in
-            if stream.streamURL != nil {
-                print("Stream is ready at URL: %@", stream.streamURL.absoluteString);
-                let dic: NSDictionary =
-                [
-                    "file": stream.streamURL,
-                    "thumbnail": stream.thumbnailURL,
-                ]
-                ApiFetcher().postLive(dic)
-            } else {
-                print("error")
-            }
-            }, completion: { success, error in
-                if error != nil {
-                   print("Error setup stream")
-                } else {
-                    print("DONE boardcasting")
-                }
-            })
+        let storyboard = UIStoryboard(name: "BroadCastView", bundle: nil)
+        let broadCastViewController = storyboard.instantiateViewControllerWithIdentifier("BroadCastView")
+        self.navigationController?.pushViewController(broadCastViewController, animated: true)
     }
     
     @IBAction func pushWathBtn() {
         let storyboard = UIStoryboard(name: "WeekView", bundle: nil)
         let weekViewController = storyboard.instantiateViewControllerWithIdentifier("WeekView")
         self.navigationController?.pushViewController(weekViewController, animated: true)
-    
     }
     
     

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/kohey/Documents/dev/playground/LiveStreamingSample/GNChannel.xcodeproj">
+      location = "group:GNChannel.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
