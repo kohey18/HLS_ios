@@ -1,5 +1,5 @@
 //
-//  TopViewController.swift
+//  HomeViewController.swift
 //  LiveStreamingSample
 //
 //  Created by kohey on 2015/07/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TopViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -17,11 +17,14 @@ class TopViewController: UIViewController {
     var thumbPosition:CGFloat = 100
     var livesArray = []
     
+    /*
+    override func loadView() {
+        //self.view = NSBundle.mainBundle().loadNibNamed("HomeView", owner: nil, options: nil).first as? UIView
+    }*/
+    
     override func viewDidLoad() {
-        
         self.navigationController?.navigationBarHidden = true
-        
-        self.view.backgroundColor = UIColor.blackColor()
+        self.view.backgroundColor = UIColor.gn_blackColor()
         self.broadcastBtn.backgroundColor = UIColor.yellowColor()
         self.watchBtn.backgroundColor = UIColor.yellowColor()
         
@@ -29,7 +32,8 @@ class TopViewController: UIViewController {
         self.watchBtn.layer.cornerRadius = 10.0
         self.broadcastBtn.clipsToBounds = true
         self.watchBtn.clipsToBounds = true
-        
+
+
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -69,6 +73,13 @@ class TopViewController: UIViewController {
                     print("DONE boardcasting")
                 }
             })
+    }
+    
+    @IBAction func pushWathBtn() {
+        let storyboard = UIStoryboard(name: "WeekView", bundle: nil)
+        let weekViewController = storyboard.instantiateViewControllerWithIdentifier("WeekView")
+        self.navigationController?.pushViewController(weekViewController, animated: true)
+    
     }
     
     

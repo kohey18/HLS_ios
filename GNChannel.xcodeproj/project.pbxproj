@@ -10,7 +10,7 @@
 		5420BBB01C00D07500294D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBAF1C00D07500294D99 /* AppDelegate.swift */; };
 		5420BBB31C00D09700294D99 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBB21C00D09700294D99 /* LiveViewController.swift */; };
 		5420BBB51C00D0AB00294D99 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBB41C00D0AB00294D99 /* PlayerViewController.swift */; };
-		5420BBB71C00D0B900294D99 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBB61C00D0B900294D99 /* TopViewController.swift */; };
+		5420BBB71C00D0B900294D99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBB61C00D0B900294D99 /* HomeViewController.swift */; };
 		5420BBBD1C00D10000294D99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBBC1C00D10000294D99 /* Images.xcassets */; };
 		5420BBBF1C00D10C00294D99 /* logo_oyasumich.png in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBBE1C00D10C00294D99 /* logo_oyasumich.png */; };
 		5420BBC11C00D11300294D99 /* video_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBC01C00D11300294D99 /* video_button.png */; };
@@ -20,7 +20,13 @@
 		5420BBCD1C00D32200294D99 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBCC1C00D32200294D99 /* Info.plist */; };
 		5420BBD11C00D5D800294D99 /* GNChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBC61C00D17F00294D99 /* GNChannelTests.swift */; };
 		5420BBD41C00D87700294D99 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBD21C00D87700294D99 /* LaunchScreen.xib */; };
-		5420BBD71C00D88C00294D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBD51C00D88C00294D99 /* Main.storyboard */; };
+		5420BBDA1C00DC2B00294D99 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBD91C00DC2B00294D99 /* HomeView.storyboard */; };
+		5420BBDD1C00E2E900294D99 /* WeekView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBDC1C00E2E900294D99 /* WeekView.storyboard */; };
+		5420BBE21C00E36900294D99 /* LiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBE11C00E36900294D99 /* LiveViewController.storyboard */; };
+		5420BBE41C00E38F00294D99 /* PlayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBE31C00E38F00294D99 /* PlayerViewController.storyboard */; };
+		5420BBE71C00E9B300294D99 /* UIColor+GNChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */; };
+		54B3587F1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */; };
+		54B358811C018F6F00A5DDA9 /* BroadCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */; };
 		54D2F2071B5A57400085E390 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D2F2061B5A57400085E390 /* AVKit.framework */; };
 		9E3675C8A7E703CCB9E7CA08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3640DDEB0325AD4886D6F7 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -41,7 +47,7 @@
 		5420BBAF1C00D07500294D99 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = GNChannel/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		5420BBB21C00D09700294D99 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LiveViewController.swift; path = GNChannel/LiveViewController.swift; sourceTree = SOURCE_ROOT; };
 		5420BBB41C00D0AB00294D99 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = GNChannel/PlayerViewController.swift; sourceTree = SOURCE_ROOT; };
-		5420BBB61C00D0B900294D99 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopViewController.swift; path = GNChannel/TopViewController.swift; sourceTree = SOURCE_ROOT; };
+		5420BBB61C00D0B900294D99 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = GNChannel/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		5420BBB91C00D0DB00294D99 /* KFSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KFSecrets.h; path = GNChannel/KFSecrets.h; sourceTree = SOURCE_ROOT; };
 		5420BBBA1C00D0E300294D99 /* WeekProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeekProgram.swift; path = GNChannel/WeekProgram.swift; sourceTree = SOURCE_ROOT; };
 		5420BBBC1C00D10000294D99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GNChannel/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -54,9 +60,14 @@
 		5420BBCC1C00D32200294D99 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GNChannel/Info.plist; sourceTree = SOURCE_ROOT; };
 		5420BBCF1C00D39000294D99 /* GNChannel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GNChannel-Bridging-Header.h"; path = "GNChannel/GNChannel-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		5420BBD31C00D87700294D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = GNChannel/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
-		5420BBD61C00D88C00294D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GNChannel/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		5420BBD91C00DC2B00294D99 /* HomeView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = SOURCE_ROOT; };
+		5420BBDC1C00E2E900294D99 /* WeekView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeekView.storyboard; sourceTree = SOURCE_ROOT; };
+		5420BBE11C00E36900294D99 /* LiveViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LiveViewController.storyboard; sourceTree = SOURCE_ROOT; };
+		5420BBE31C00E38F00294D99 /* PlayerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerViewController.storyboard; sourceTree = SOURCE_ROOT; };
+		5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+GNChannel.swift"; sourceTree = SOURCE_ROOT; };
+		54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryBoard.swift"; sourceTree = SOURCE_ROOT; };
+		54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroadCastViewController.swift; sourceTree = SOURCE_ROOT; };
 		54D2F1DD1B5A50980085E390 /* GNChannel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GNChannel.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		54D2F1E11B5A50980085E390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54D2F1F21B5A50980085E390 /* GNChannel.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNChannel.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D2F2061B5A57400085E390 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		DC182099446FD94F055E167A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,12 +105,66 @@
 		5420BBB11C00D08200294D99 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5420BBBA1C00D0E300294D99 /* WeekProgram.swift */,
-				5420BBB21C00D09700294D99 /* LiveViewController.swift */,
-				5420BBB41C00D0AB00294D99 /* PlayerViewController.swift */,
-				5420BBB61C00D0B900294D99 /* TopViewController.swift */,
+				5420BBE01C00E34C00294D99 /* PlayerViewController */,
+				5420BBDF1C00E33500294D99 /* LiveViewController */,
+				5420BBDE1C00E32000294D99 /* BroadCastViewController */,
+				5420BBDB1C00E2C800294D99 /* WeekViewController */,
+				5420BBD81C00DC0800294D99 /* HomeViewController */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		5420BBD81C00DC0800294D99 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5420BBB61C00D0B900294D99 /* HomeViewController.swift */,
+				5420BBD91C00DC2B00294D99 /* HomeView.storyboard */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		5420BBDB1C00E2C800294D99 /* WeekViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5420BBBA1C00D0E300294D99 /* WeekProgram.swift */,
+				5420BBDC1C00E2E900294D99 /* WeekView.storyboard */,
+			);
+			name = WeekViewController;
+			sourceTree = "<group>";
+		};
+		5420BBDE1C00E32000294D99 /* BroadCastViewController */ = {
+			isa = PBXGroup;
+			children = (
+				54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */,
+			);
+			name = BroadCastViewController;
+			sourceTree = "<group>";
+		};
+		5420BBDF1C00E33500294D99 /* LiveViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5420BBB21C00D09700294D99 /* LiveViewController.swift */,
+				5420BBE11C00E36900294D99 /* LiveViewController.storyboard */,
+			);
+			name = LiveViewController;
+			sourceTree = "<group>";
+		};
+		5420BBE01C00E34C00294D99 /* PlayerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5420BBB41C00D0AB00294D99 /* PlayerViewController.swift */,
+				5420BBE31C00E38F00294D99 /* PlayerViewController.storyboard */,
+			);
+			name = PlayerViewController;
+			sourceTree = "<group>";
+		};
+		5420BBE51C00E98600294D99 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */,
+				54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		543FBD861B5B8F1A001AC410 /* API */ = {
@@ -134,6 +199,7 @@
 		54D2F1DF1B5A50980085E390 /* GNChannel */ = {
 			isa = PBXGroup;
 			children = (
+				5420BBE51C00E98600294D99 /* Common */,
 				5420BBCF1C00D39000294D99 /* GNChannel-Bridging-Header.h */,
 				5420BBB91C00D0DB00294D99 /* KFSecrets.h */,
 				5420BBB11C00D08200294D99 /* ViewController */,
@@ -141,7 +207,7 @@
 				543FBD861B5B8F1A001AC410 /* API */,
 				54D2F2101B5B4BD00085E390 /* images */,
 				5420BBD21C00D87700294D99 /* LaunchScreen.xib */,
-				5420BBD51C00D88C00294D99 /* Main.storyboard */,
+				5420BBC21C00D14D00294D99 /* Info.plist */,
 				54D2F1E01B5A50980085E390 /* Supporting Files */,
 				5420BBC41C00D15C00294D99 /* WeekProgram.swift */,
 			);
@@ -152,7 +218,6 @@
 		54D2F1E01B5A50980085E390 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				54D2F1E11B5A50980085E390 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -161,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				5420BBC61C00D17F00294D99 /* GNChannelTests.swift */,
-				5420BBC21C00D14D00294D99 /* Info.plist */,
 				54D2F1F61B5A50980085E390 /* Supporting Files */,
 			);
 			name = GNChannelTests;
@@ -279,12 +343,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5420BBD71C00D88C00294D99 /* Main.storyboard in Resources */,
 				5420BBBD1C00D10000294D99 /* Images.xcassets in Resources */,
 				5420BBC31C00D14D00294D99 /* Info.plist in Resources */,
+				5420BBE21C00E36900294D99 /* LiveViewController.storyboard in Resources */,
+				5420BBE41C00E38F00294D99 /* PlayerViewController.storyboard in Resources */,
 				5420BBD41C00D87700294D99 /* LaunchScreen.xib in Resources */,
+				5420BBDA1C00DC2B00294D99 /* HomeView.storyboard in Resources */,
 				5420BBBF1C00D10C00294D99 /* logo_oyasumich.png in Resources */,
 				5420BBC11C00D11300294D99 /* video_button.png in Resources */,
+				5420BBDD1C00E2E900294D99 /* WeekView.storyboard in Resources */,
 				5420BBCD1C00D32200294D99 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,11 +419,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5420BBCA1C00D24F00294D99 /* WeekProgram.swift in Sources */,
-				5420BBB71C00D0B900294D99 /* TopViewController.swift in Sources */,
+				5420BBB71C00D0B900294D99 /* HomeViewController.swift in Sources */,
+				54B358811C018F6F00A5DDA9 /* BroadCastViewController.swift in Sources */,
 				5420BBB01C00D07500294D99 /* AppDelegate.swift in Sources */,
+				5420BBE71C00E9B300294D99 /* UIColor+GNChannel.swift in Sources */,
 				5420BBB31C00D09700294D99 /* LiveViewController.swift in Sources */,
 				5420BBC91C00D1F900294D99 /* ApiFetcher.swift in Sources */,
 				5420BBB51C00D0AB00294D99 /* PlayerViewController.swift in Sources */,
+				54B3587F1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,14 +455,6 @@
 				5420BBD31C00D87700294D99 /* Base */,
 			);
 			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-		5420BBD51C00D88C00294D99 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5420BBD61C00D88C00294D99 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

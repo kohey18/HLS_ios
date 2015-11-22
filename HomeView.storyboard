@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GBd-im-zWT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="gf3-uD-iWC">
+            <objects>
+                <viewController restorationIdentifier="HomeView" storyboardIdentifier="HomeView" id="GBd-im-zWT" customClass="HomeViewController" customModule="GNChannel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rfy-2y-0Ba"/>
+                        <viewControllerLayoutGuide type="bottom" id="gG2-Nb-1Wm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8az-Ny-Xaj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vR-eA-2iQ">
+                                <rect key="frame" x="60" y="371" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="68M-wX-Dhk"/>
+                                </constraints>
+                                <state key="normal" title="見る">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pushWathBtn" destination="GBd-im-zWT" eventType="touchUpInside" id="XLD-49-ynM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo_oyasumich.png" translatesAutoresizingMaskIntoConstraints="NO" id="ha9-y3-Pkn">
+                                <rect key="frame" x="47" y="105" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="1Tv-lv-UmL"/>
+                                    <constraint firstAttribute="height" constant="128" id="OCs-37-o3j"/>
+                                    <constraint firstAttribute="width" constant="240" id="qck-sn-Bjz"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="149" width="300" height="148"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNG-fn-Sxd">
+                                <rect key="frame" x="60" y="281" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Dko-12-iSC"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="放送する">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="startLive" destination="GBd-im-zWT" eventType="touchUpInside" id="UUF-Fd-1QK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tNG-fn-Sxd" firstAttribute="top" secondItem="ha9-y3-Pkn" secondAttribute="bottom" constant="48" id="5F3-uK-jiz"/>
+                            <constraint firstItem="ha9-y3-Pkn" firstAttribute="top" secondItem="Rfy-2y-0Ba" secondAttribute="bottom" constant="105" id="7IG-6G-f58"/>
+                            <constraint firstItem="7vR-eA-2iQ" firstAttribute="top" secondItem="Rfy-2y-0Ba" secondAttribute="bottom" constant="371" id="NWV-Se-TTS"/>
+                            <constraint firstItem="7vR-eA-2iQ" firstAttribute="centerX" secondItem="ha9-y3-Pkn" secondAttribute="centerX" id="Rn1-mx-k9w"/>
+                            <constraint firstItem="tNG-fn-Sxd" firstAttribute="width" secondItem="ha9-y3-Pkn" secondAttribute="width" id="SCO-0W-KfR"/>
+                            <constraint firstItem="7vR-eA-2iQ" firstAttribute="width" secondItem="ha9-y3-Pkn" secondAttribute="width" id="TEa-X1-Yr4"/>
+                            <constraint firstItem="ha9-y3-Pkn" firstAttribute="centerX" secondItem="8az-Ny-Xaj" secondAttribute="centerX" id="X8l-Ig-h2h"/>
+                            <constraint firstItem="tNG-fn-Sxd" firstAttribute="top" secondItem="Rfy-2y-0Ba" secondAttribute="bottom" constant="284" id="XFx-NF-qm8"/>
+                            <constraint firstItem="tNG-fn-Sxd" firstAttribute="centerX" secondItem="ha9-y3-Pkn" secondAttribute="centerX" id="dgC-cH-goM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sa2-EC-KKn"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="broadcastBtn" destination="tNG-fn-Sxd" id="TWb-Tj-zi8"/>
+                        <outlet property="watchBtn" destination="7vR-eA-2iQ" id="plO-Kl-MSe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fR-cX-bAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="928.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_oyasumich.png" width="601" height="297"/>
+    </resources>
+</document>

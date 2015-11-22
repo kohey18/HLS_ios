@@ -1,6 +1,6 @@
 //
 //  LiveViewController.swift
-//  LiveStreamingSample
+//  CGChannel
 //
 //  Created by kohey on 2015/07/18.
 //  Copyright (c) 2015年 kohey. All rights reserved.

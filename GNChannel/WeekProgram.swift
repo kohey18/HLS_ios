@@ -18,9 +18,11 @@ class WeekProgram: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBarHidden = false
-                self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-        self.navigationController?.navigationBar.tintColor = UIColor.yellowColor()
+                self.navigationController?.navigationBar.barTintColor = UIColor.gn_blackColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.gn_yellowColor()
+        self.view.backgroundColor = UIColor.gn_blackColor()
         //self.dayLabel.backgroundColor = UIColor.yellowColor()
         //self.dayLabel.layer.cornerRadius = self.dayLabel.frame.size.width / 2
         self.dayLabel.font = UIFont.systemFontOfSize(25)
