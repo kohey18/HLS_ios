@@ -10,13 +10,18 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class PlayerViewController: AVPlayerViewController {
+class PlayerViewController: UIViewController {
     
-    var _liveURL:NSString = ""
-    
+    var liveURL:NSString = ""
+    @IBOutlet weak var programName: UILabel!
+    @IBOutlet weak var programDesc: UILabel!
+    @IBOutlet weak var programPlayerView: AVPlayerView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLive(_liveURL)
+        
+        programDesc.sizeToFit()
+        print(liveURL)
+        setLive(liveURL)
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,11 +29,19 @@ class PlayerViewController: AVPlayerViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func setLayer() {
+    }
+    
     func setLive(liveUrl: NSString) {
         let url = NSURL(string: liveUrl as String)
+        // player作成
         let playerItem = AVPlayerItem(URL: url!)
-        let player = AVPlayer(playerItem: playerItem)
-        self.player = player
-        self.player!.play()
+        var player = AVPlayer(playerItem: playerItem)
+        player = AVPlayer(URL: url!)        
+        //view作成
+        let layer = programPlayerView!.layer as! AVPlayerLayer
+        layer.videoGravity = AVLayerVideoGravityResizeAspect
+        layer.player = player
+        layer.player?.play()
     }
 }

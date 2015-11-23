@@ -6,30 +6,38 @@
 //  Copyright © 2015年 kohey. All rights reserved.
 //
 
-class WeekProgram: UIViewController {
+import UIKit
+
+class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let labelWidth: Int = 30
     let labelHeight: Int = 30
+    var programs = []
     
-    @IBOutlet weak var userThumnailImg: UIImageView!
     @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-    var livesArray = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        arrangeDays(self.dayLabel)
+        getPrograms()
         
         self.navigationController?.navigationBarHidden = false
                 self.navigationController?.navigationBar.barTintColor = UIColor.gn_blackColor()
         self.navigationController?.navigationBar.tintColor = UIColor.gn_yellowColor()
         self.view.backgroundColor = UIColor.gn_blackColor()
         //self.dayLabel.backgroundColor = UIColor.yellowColor()
-        //self.dayLabel.layer.cornerRadius = self.dayLabel.frame.size.width / 2
+        self.dayLabel.layer.cornerRadius = self.dayLabel.frame.size.width / 2
         self.dayLabel.font = UIFont.systemFontOfSize(25)
-        arrangeDays(self.dayLabel)
-        getThumbnails()
+
+        // tableView設定
+        tableView.delegate = self
+        tableView.dataSource = self
+        //カスタムセルを指定
+        let nib  = UINib(nibName: "ProgramTableViewCell", bundle:nil)
+        tableView.registerNib(nib, forCellReuseIdentifier:"Cell")
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,44 +68,57 @@ class WeekProgram: UIViewController {
 
     }
     
-    private func getThumbnails() {
+    // complitationで書き直す
+    private func getPrograms() {
         ApiFetcher().getLives { (responseObject: NSDictionary?, error:NSError?) -> Void in
-            // View作成
-            self.livesArray = responseObject!["result"] as! NSArray
-
-            //for (index,dic) in enumerate(self.livesArray) {
-            //for (_,dic) in livesArray.enumerate() {
-            
-            let thumbURL = self.livesArray[0]["thumbnail"] as! NSString
+            self.programs = responseObject!["result"] as! NSArray
+            self.tableView.reloadData()
+        }
+    }
+    
+    func setCell(index: Int, cell: ProgramTableViewCell) -> ProgramTableViewCell {
+            let thumbURL = self.programs[index]["thumbnail"] as! NSString
             let url = NSURL(string: thumbURL as String)
-            
-            self.userThumnailImg.userInteractionEnabled = true
-            let myTap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "tapGesture:")
-            self.userThumnailImg.addGestureRecognizer(myTap)
-
             let imgData: NSData
             do {
                 imgData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
-                self.userThumnailImg.image = UIImage(data:imgData);
+                cell.userImageView.image = UIImage(data: imgData);
             } catch {
                 print("Error: can't create image.")
             }
-            
-        }
+        cell.backgroundColor = UIColor.clearColor()
+        return cell
     }
     
-    func tapGesture(sender:UITapGestureRecognizer) {
-        performSegueWithIdentifier("playerSegue", sender: sender)
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int  {
+        print(self.programs.count)
+        return self.programs.count
+    }
+
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! ProgramTableViewCell
+        // TODO: cellの再描画しないようにする
+        let newCell = setCell(indexPath.row, cell: cell)
+        
+        return newCell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "playerSegue") {
-            let img = sender.view as! UIImageView
-            let url = self.livesArray[0]["file"] as! NSString
-            print(url)
-            let secondView: PlayerViewController = segue.destinationViewController as! PlayerViewController
-            secondView._liveURL = url
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+        let storyboard = UIStoryboard(name: "PlayerView", bundle: nil)
+        if let playerView = storyboard.instantiateViewControllerWithIdentifier("PlayerView") as? PlayerViewController{
+            playerView.liveURL = self.programs[indexPath.row]["file"] as! NSString
+            self.navigationController?.pushViewController(playerView, animated: true)
+        } else {
+            print("error")
         }
+
+
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
     }
 
 }

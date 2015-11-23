@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5420BBB01C00D07500294D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBAF1C00D07500294D99 /* AppDelegate.swift */; };
-		5420BBB31C00D09700294D99 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBB21C00D09700294D99 /* LiveViewController.swift */; };
 		5420BBB51C00D0AB00294D99 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBB41C00D0AB00294D99 /* PlayerViewController.swift */; };
 		5420BBB71C00D0B900294D99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBB61C00D0B900294D99 /* HomeViewController.swift */; };
 		5420BBBD1C00D10000294D99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBBC1C00D10000294D99 /* Images.xcassets */; };
@@ -22,13 +21,15 @@
 		5420BBD41C00D87700294D99 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBD21C00D87700294D99 /* LaunchScreen.xib */; };
 		5420BBDA1C00DC2B00294D99 /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBD91C00DC2B00294D99 /* HomeView.storyboard */; };
 		5420BBDD1C00E2E900294D99 /* WeekView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBDC1C00E2E900294D99 /* WeekView.storyboard */; };
-		5420BBE21C00E36900294D99 /* LiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBE11C00E36900294D99 /* LiveViewController.storyboard */; };
-		5420BBE41C00E38F00294D99 /* PlayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBE31C00E38F00294D99 /* PlayerViewController.storyboard */; };
+		5420BBE41C00E38F00294D99 /* PlayerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBE31C00E38F00294D99 /* PlayerView.storyboard */; };
 		5420BBE71C00E9B300294D99 /* UIColor+GNChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */; };
+		549961DF1C02F6400096D65D /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549961DE1C02F6400096D65D /* AVPlayerView.swift */; };
 		54A2A7451C019F8D001C6BA7 /* BroadCastView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A2A7441C019F8D001C6BA7 /* BroadCastView.storyboard */; };
 		54B3587F1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */; };
 		54B358811C018F6F00A5DDA9 /* BroadCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */; };
 		54D2F2071B5A57400085E390 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D2F2061B5A57400085E390 /* AVKit.framework */; };
+		54D366521C02408E00441D90 /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D366511C02408E00441D90 /* ProgramTableViewCell.xib */; };
+		54D366541C02413B00441D90 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D366531C02413B00441D90 /* ProgramTableViewCell.swift */; };
 		9E3675C8A7E703CCB9E7CA08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3640DDEB0325AD4886D6F7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +47,6 @@
 		3E3640DDEB0325AD4886D6F7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DD77745378F90FD07399D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5420BBAF1C00D07500294D99 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = GNChannel/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		5420BBB21C00D09700294D99 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LiveViewController.swift; path = GNChannel/LiveViewController.swift; sourceTree = SOURCE_ROOT; };
 		5420BBB41C00D0AB00294D99 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = GNChannel/PlayerViewController.swift; sourceTree = SOURCE_ROOT; };
 		5420BBB61C00D0B900294D99 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = GNChannel/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		5420BBB91C00D0DB00294D99 /* KFSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KFSecrets.h; path = GNChannel/KFSecrets.h; sourceTree = SOURCE_ROOT; };
@@ -63,15 +63,17 @@
 		5420BBD31C00D87700294D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = GNChannel/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		5420BBD91C00DC2B00294D99 /* HomeView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = SOURCE_ROOT; };
 		5420BBDC1C00E2E900294D99 /* WeekView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeekView.storyboard; sourceTree = SOURCE_ROOT; };
-		5420BBE11C00E36900294D99 /* LiveViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LiveViewController.storyboard; sourceTree = SOURCE_ROOT; };
-		5420BBE31C00E38F00294D99 /* PlayerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerViewController.storyboard; sourceTree = SOURCE_ROOT; };
+		5420BBE31C00E38F00294D99 /* PlayerView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerView.storyboard; sourceTree = SOURCE_ROOT; };
 		5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+GNChannel.swift"; sourceTree = SOURCE_ROOT; };
+		549961DE1C02F6400096D65D /* AVPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = SOURCE_ROOT; };
 		54A2A7441C019F8D001C6BA7 /* BroadCastView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BroadCastView.storyboard; sourceTree = SOURCE_ROOT; };
 		54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryBoard.swift"; sourceTree = SOURCE_ROOT; };
 		54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroadCastViewController.swift; sourceTree = SOURCE_ROOT; };
 		54D2F1DD1B5A50980085E390 /* GNChannel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GNChannel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D2F1F21B5A50980085E390 /* GNChannel.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNChannel.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D2F2061B5A57400085E390 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		54D366511C02408E00441D90 /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		54D366531C02413B00441D90 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		DC182099446FD94F055E167A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				5420BBE01C00E34C00294D99 /* PlayerViewController */,
-				5420BBDF1C00E33500294D99 /* LiveViewController */,
 				5420BBDE1C00E32000294D99 /* BroadCastViewController */,
 				5420BBDB1C00E2C800294D99 /* WeekViewController */,
 				5420BBD81C00DC0800294D99 /* HomeViewController */,
@@ -130,6 +131,8 @@
 			children = (
 				5420BBBA1C00D0E300294D99 /* WeekProgram.swift */,
 				5420BBDC1C00E2E900294D99 /* WeekView.storyboard */,
+				54D366511C02408E00441D90 /* ProgramTableViewCell.xib */,
+				54D366531C02413B00441D90 /* ProgramTableViewCell.swift */,
 			);
 			name = WeekViewController;
 			sourceTree = "<group>";
@@ -143,20 +146,12 @@
 			name = BroadCastViewController;
 			sourceTree = "<group>";
 		};
-		5420BBDF1C00E33500294D99 /* LiveViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5420BBB21C00D09700294D99 /* LiveViewController.swift */,
-				5420BBE11C00E36900294D99 /* LiveViewController.storyboard */,
-			);
-			name = LiveViewController;
-			sourceTree = "<group>";
-		};
 		5420BBE01C00E34C00294D99 /* PlayerViewController */ = {
 			isa = PBXGroup;
 			children = (
 				5420BBB41C00D0AB00294D99 /* PlayerViewController.swift */,
-				5420BBE31C00E38F00294D99 /* PlayerViewController.storyboard */,
+				5420BBE31C00E38F00294D99 /* PlayerView.storyboard */,
+				549961DE1C02F6400096D65D /* AVPlayerView.swift */,
 			);
 			name = PlayerViewController;
 			sourceTree = "<group>";
@@ -349,8 +344,8 @@
 				5420BBBD1C00D10000294D99 /* Images.xcassets in Resources */,
 				54A2A7451C019F8D001C6BA7 /* BroadCastView.storyboard in Resources */,
 				5420BBC31C00D14D00294D99 /* Info.plist in Resources */,
-				5420BBE21C00E36900294D99 /* LiveViewController.storyboard in Resources */,
-				5420BBE41C00E38F00294D99 /* PlayerViewController.storyboard in Resources */,
+				54D366521C02408E00441D90 /* ProgramTableViewCell.xib in Resources */,
+				5420BBE41C00E38F00294D99 /* PlayerView.storyboard in Resources */,
 				5420BBD41C00D87700294D99 /* LaunchScreen.xib in Resources */,
 				5420BBDA1C00DC2B00294D99 /* HomeView.storyboard in Resources */,
 				5420BBBF1C00D10C00294D99 /* logo_oyasumich.png in Resources */,
@@ -426,10 +421,11 @@
 				5420BBB71C00D0B900294D99 /* HomeViewController.swift in Sources */,
 				54B358811C018F6F00A5DDA9 /* BroadCastViewController.swift in Sources */,
 				5420BBB01C00D07500294D99 /* AppDelegate.swift in Sources */,
+				549961DF1C02F6400096D65D /* AVPlayerView.swift in Sources */,
 				5420BBE71C00E9B300294D99 /* UIColor+GNChannel.swift in Sources */,
-				5420BBB31C00D09700294D99 /* LiveViewController.swift in Sources */,
 				5420BBC91C00D1F900294D99 /* ApiFetcher.swift in Sources */,
 				5420BBB51C00D0AB00294D99 /* PlayerViewController.swift in Sources */,
+				54D366541C02413B00441D90 /* ProgramTableViewCell.swift in Sources */,
 				54B3587F1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
