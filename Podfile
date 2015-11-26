@@ -5,5 +5,7 @@ platform :ios, "8.0"
 # pod 'Kickflip', :path => 'Submodules/kickflip-ios-sdk/Kickflip.podspec'
 
 #pod 'Kickflip' , '~> 1.3'
-pod 'Kickflip', :path => '~/Documents/dev/playground/kickflip-ios-sdk/Kickflip.podspec'
+#pod 'Kickflip', :path => '~/Documents/dev/playground/kickflip-ios-sdk/Kickflip.podspec'
+pod 'Kickflip'
+#pod 'Kickflip', git: 'https://github.com/kohey18/kickflip-ios-sdk', :tag => '1.4'
 pod 'Bolts'

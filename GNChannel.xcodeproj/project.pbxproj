@@ -15,7 +15,6 @@
 		5420BBC11C00D11300294D99 /* video_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBC01C00D11300294D99 /* video_button.png */; };
 		5420BBC31C00D14D00294D99 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBC21C00D14D00294D99 /* Info.plist */; };
 		5420BBC91C00D1F900294D99 /* ApiFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBC81C00D1F900294D99 /* ApiFetcher.swift */; };
-		5420BBCA1C00D24F00294D99 /* WeekProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBC41C00D15C00294D99 /* WeekProgram.swift */; };
 		5420BBCD1C00D32200294D99 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBCC1C00D32200294D99 /* Info.plist */; };
 		5420BBD11C00D5D800294D99 /* GNChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBC61C00D17F00294D99 /* GNChannelTests.swift */; };
 		5420BBD41C00D87700294D99 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBD21C00D87700294D99 /* LaunchScreen.xib */; };
@@ -24,6 +23,7 @@
 		5420BBE41C00E38F00294D99 /* PlayerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBE31C00E38F00294D99 /* PlayerView.storyboard */; };
 		5420BBE71C00E9B300294D99 /* UIColor+GNChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */; };
 		549961DF1C02F6400096D65D /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549961DE1C02F6400096D65D /* AVPlayerView.swift */; };
+		549961E51C02FDF00096D65D /* WeekProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549961E41C02FDF00096D65D /* WeekProgram.swift */; };
 		54A2A7451C019F8D001C6BA7 /* BroadCastView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A2A7441C019F8D001C6BA7 /* BroadCastView.storyboard */; };
 		54B3587F1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */; };
 		54B358811C018F6F00A5DDA9 /* BroadCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */; };
@@ -50,12 +50,10 @@
 		5420BBB41C00D0AB00294D99 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = GNChannel/PlayerViewController.swift; sourceTree = SOURCE_ROOT; };
 		5420BBB61C00D0B900294D99 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = GNChannel/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		5420BBB91C00D0DB00294D99 /* KFSecrets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KFSecrets.h; path = GNChannel/KFSecrets.h; sourceTree = SOURCE_ROOT; };
-		5420BBBA1C00D0E300294D99 /* WeekProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeekProgram.swift; path = GNChannel/WeekProgram.swift; sourceTree = SOURCE_ROOT; };
 		5420BBBC1C00D10000294D99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GNChannel/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		5420BBBE1C00D10C00294D99 /* logo_oyasumich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_oyasumich.png; path = GNChannel/logo_oyasumich.png; sourceTree = SOURCE_ROOT; };
 		5420BBC01C00D11300294D99 /* video_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = video_button.png; path = GNChannel/video_button.png; sourceTree = SOURCE_ROOT; };
 		5420BBC21C00D14D00294D99 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GNChannelTests/Info.plist; sourceTree = SOURCE_ROOT; };
-		5420BBC41C00D15C00294D99 /* WeekProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeekProgram.swift; path = GNChannel/WeekProgram.swift; sourceTree = SOURCE_ROOT; };
 		5420BBC61C00D17F00294D99 /* GNChannelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GNChannelTests.swift; path = GNChannelTests/GNChannelTests.swift; sourceTree = SOURCE_ROOT; };
 		5420BBC81C00D1F900294D99 /* ApiFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiFetcher.swift; path = GNChannel/ApiFetcher.swift; sourceTree = SOURCE_ROOT; };
 		5420BBCC1C00D32200294D99 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GNChannel/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -66,6 +64,7 @@
 		5420BBE31C00E38F00294D99 /* PlayerView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerView.storyboard; sourceTree = SOURCE_ROOT; };
 		5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+GNChannel.swift"; sourceTree = SOURCE_ROOT; };
 		549961DE1C02F6400096D65D /* AVPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = SOURCE_ROOT; };
+		549961E41C02FDF00096D65D /* WeekProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekProgram.swift; sourceTree = SOURCE_ROOT; };
 		54A2A7441C019F8D001C6BA7 /* BroadCastView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BroadCastView.storyboard; sourceTree = SOURCE_ROOT; };
 		54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryBoard.swift"; sourceTree = SOURCE_ROOT; };
 		54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroadCastViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -129,7 +128,7 @@
 		5420BBDB1C00E2C800294D99 /* WeekViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5420BBBA1C00D0E300294D99 /* WeekProgram.swift */,
+				549961E41C02FDF00096D65D /* WeekProgram.swift */,
 				5420BBDC1C00E2E900294D99 /* WeekView.storyboard */,
 				54D366511C02408E00441D90 /* ProgramTableViewCell.xib */,
 				54D366531C02413B00441D90 /* ProgramTableViewCell.swift */,
@@ -207,7 +206,6 @@
 				5420BBD21C00D87700294D99 /* LaunchScreen.xib */,
 				5420BBC21C00D14D00294D99 /* Info.plist */,
 				54D2F1E01B5A50980085E390 /* Supporting Files */,
-				5420BBC41C00D15C00294D99 /* WeekProgram.swift */,
 			);
 			name = GNChannel;
 			path = LiveStreamingSample;
@@ -417,11 +415,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5420BBCA1C00D24F00294D99 /* WeekProgram.swift in Sources */,
 				5420BBB71C00D0B900294D99 /* HomeViewController.swift in Sources */,
 				54B358811C018F6F00A5DDA9 /* BroadCastViewController.swift in Sources */,
 				5420BBB01C00D07500294D99 /* AppDelegate.swift in Sources */,
 				549961DF1C02F6400096D65D /* AVPlayerView.swift in Sources */,
+				549961E51C02FDF00096D65D /* WeekProgram.swift in Sources */,
 				5420BBE71C00E9B300294D99 /* UIColor+GNChannel.swift in Sources */,
 				5420BBC91C00D1F900294D99 /* ApiFetcher.swift in Sources */,
 				5420BBB51C00D0AB00294D99 /* PlayerViewController.swift in Sources */,

@@ -86,7 +86,6 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
             } catch {
                 print("Error: can't create image.")
             }
-        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
     
@@ -99,9 +98,10 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! ProgramTableViewCell
         // TODO: cellの再描画しないようにする
-        let newCell = setCell(indexPath.row, cell: cell)
-        
-        return newCell
+        //let newCell = setCell(indexPath.row, cell: cell)
+        //newCell.backgroundColor = UIColor.clearColor()
+        cell.backgroundColor = UIColor.clearColor()
+        return cell
     }
     
 
@@ -113,8 +113,6 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
         } else {
             print("error")
         }
-
-
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

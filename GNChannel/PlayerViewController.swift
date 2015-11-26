@@ -20,8 +20,8 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
         
         programDesc.sizeToFit()
-        print(liveURL)
         setLive(liveURL)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,6 +40,7 @@ class PlayerViewController: UIViewController {
         player = AVPlayer(URL: url!)        
         //view作成
         let layer = programPlayerView!.layer as! AVPlayerLayer
+        layer.frame = self.programPlayerView.bounds
         layer.videoGravity = AVLayerVideoGravityResizeAspect
         layer.player = player
         layer.player?.play()
