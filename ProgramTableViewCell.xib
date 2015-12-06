@@ -7,30 +7,30 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="103" id="mz7-yJ-K9g" customClass="ProgramTableViewCell" customModule="GNChannel" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="360" height="100"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="153" id="mz7-yJ-K9g" customClass="ProgramTableViewCell" customModule="GNChannel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mz7-yJ-K9g" id="2n7-lA-gh8">
-                <rect key="frame" x="0.0" y="0.0" width="360" height="99.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="360" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1RL-Ug-jE6">
-                        <rect key="frame" x="-1" y="-1" width="100" height="100"/>
+                        <rect key="frame" x="-1" y="-1" width="100" height="150"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="おやすみちゃんねる" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1h-5S-mQk">
-                        <rect key="frame" x="116" y="11" width="159" height="21"/>
+                        <rect key="frame" x="116" y="11" width="236" height="21"/>
                         <color key="tintColor" red="1" green="0.94117647059999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="説明が入ります。説明が入ります。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPf-e4-25O">
-                        <rect key="frame" x="116" y="70" width="256" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="河合 航平" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSm-qQ-JEX">
+                        <rect key="frame" x="116" y="41" width="159" height="21"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="河合 航平" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSm-qQ-JEX">
-                        <rect key="frame" x="116" y="41" width="159" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="説明が入ります。説明が入ります。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPf-e4-25O">
+                        <rect key="frame" x="116" y="70" width="236" height="71.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -43,7 +43,7 @@
                 <outlet property="programUserName" destination="nSm-qQ-JEX" id="NKN-7n-0Sv"/>
                 <outlet property="userImageView" destination="1RL-Ug-jE6" id="DCy-Xj-vCr"/>
             </connections>
-            <point key="canvasLocation" x="307.5" y="7.5"/>
+            <point key="canvasLocation" x="307" y="32"/>
         </tableViewCell>
     </objects>
 </document>

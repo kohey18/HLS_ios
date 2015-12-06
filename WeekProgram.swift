@@ -14,23 +14,17 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
     let labelHeight: Int = 30
     var programs = []
     
-    @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        arrangeDays(self.dayLabel)
-        getPrograms()
+        getUsers()
         
         self.navigationController?.navigationBarHidden = false
                 self.navigationController?.navigationBar.barTintColor = UIColor.gn_blackColor()
         self.navigationController?.navigationBar.tintColor = UIColor.gn_yellowColor()
         self.view.backgroundColor = UIColor.gn_blackColor()
-        //self.dayLabel.backgroundColor = UIColor.yellowColor()
-        self.dayLabel.layer.cornerRadius = self.dayLabel.frame.size.width / 2
-        self.dayLabel.font = UIFont.systemFontOfSize(25)
-
         // tableView設定
         tableView.delegate = self
         tableView.dataSource = self
@@ -50,42 +44,34 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func arrangeDays(dayLabel: UILabel) {
-        let days: [String] = ["火", "水", "木", "金", "土", "日"]
-        
-        for (index, day) in days.enumerate() {
-            let nextDay = UILabel(frame: CGRect(x: 0, y: 0, width: self.labelWidth, height: self.labelHeight))
-            
-            let hoge = self.dayLabel.center.x + CGFloat(30 * index + 1)
-            print(hoge)
-            
-            nextDay.font = UIFont.systemFontOfSize(25)
-            nextDay.center = CGPoint(x: (self.dayLabel.center.x + CGFloat(50 * (index + 1))), y: self.dayLabel.center.y)
-            nextDay.textColor = UIColor.yellowColor()
-            nextDay.text = day
-            self.view.addSubview(nextDay)
-        }
-
-    }
-    
     // complitationで書き直す
-    private func getPrograms() {
-        ApiFetcher().getLives { (responseObject: NSDictionary?, error:NSError?) -> Void in
+    private func getUsers() {
+        ApiFetcher().getUsers { (responseObject: NSDictionary?, error:NSError?) -> Void in
             self.programs = responseObject!["result"] as! NSArray
             self.tableView.reloadData()
         }
     }
     
     func setCell(index: Int, cell: ProgramTableViewCell) -> ProgramTableViewCell {
-            let thumbURL = self.programs[index]["thumbnail"] as! NSString
-            let url = NSURL(string: thumbURL as String)
-            let imgData: NSData
-            do {
-                imgData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe)
+        let thumbURL = self.programs[index]["thumb"] as! NSString
+        let desc = self.programs[index]["desc"]
+        let name = self.programs[index]["name"]
+        let channel = self.programs[index]["channel"]
+
+        cell.programDesc.text = desc as! String
+        cell.programName.text = channel as! String
+        cell.programUserName.text = name as! String
+        
+        
+        let url = NSURL(string: thumbURL as String)
+        let imgData: NSData
+        do {
+            imgData = try NSData(contentsOfURL:url!,options:
+                NSDataReadingOptions.DataReadingMappedIfSafe)
                 cell.userImageView.image = UIImage(data: imgData);
-            } catch {
+        } catch {
                 print("Error: can't create image.")
-            }
+        }
         return cell
     }
     
@@ -98,17 +84,22 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! ProgramTableViewCell
         // TODO: cellの再描画しないようにする
-        //let newCell = setCell(indexPath.row, cell: cell)
+        let newCell = setCell(indexPath.row, cell: cell)
         //newCell.backgroundColor = UIColor.clearColor()
-        cell.backgroundColor = UIColor.clearColor()
-        return cell
+        newCell.backgroundColor = UIColor.clearColor()
+        return newCell
     }
     
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         let storyboard = UIStoryboard(name: "PlayerView", bundle: nil)
         if let playerView = storyboard.instantiateViewControllerWithIdentifier("PlayerView") as? PlayerViewController{
-            playerView.liveURL = self.programs[indexPath.row]["file"] as! NSString
+            
+            playerView.userId = self.programs[indexPath.row]["id"] as! NSString
+            playerView.channel = self.programs[indexPath.row]["channel"] as! NSString
+            playerView.desc = self.programs[indexPath.row]["desc"] as! NSString
+            playerView.userName = self.programs[indexPath.row]["name"] as! NSString
+            
             self.navigationController?.pushViewController(playerView, animated: true)
         } else {
             print("error")
@@ -116,7 +107,7 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        return 150
     }
 
 }

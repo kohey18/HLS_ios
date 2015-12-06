@@ -18,7 +18,10 @@ class ProgramTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.programName.textColor = UIColor.whiteColor()
         self.programUserName.textColor = UIColor.whiteColor()
+                
         self.programDesc.textColor = UIColor.whiteColor()
+        self.programDesc.numberOfLines = 0
+        self.programDesc.sizeToFit()
         // Initialization code
     }
 

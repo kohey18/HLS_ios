@@ -12,5 +12,6 @@
 #import "Kickflip.h"
 #import "KFSecrets.h"
 #import "BroadCastViewController.h"
+#import "SVProgressHUD.h"
 
 #endif

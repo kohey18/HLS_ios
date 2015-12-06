@@ -316,9 +316,11 @@
     if (recorder.stream.streamURL) {
         NSLog(@"Stream is ready at URL: %@", recorder.stream.streamURL);
         ApiFetcher *fetch = [[ApiFetcher alloc]init];
+        // [TODO] 保存したユーザIDでpostする
         NSDictionary *dic = @{
                               @"file": recorder.stream.streamURL.absoluteString,
-                              @"thumbnail": recorder.stream.thumbnailURL.absoluteString
+                              @"thumbnail": recorder.stream.thumbnailURL.absoluteString,
+                              @"user_id": @"test"
                               };
         [fetch postLive:dic];
     }
