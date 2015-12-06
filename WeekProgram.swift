@@ -19,6 +19,7 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getUsers()
         
         self.navigationController?.navigationBarHidden = false
@@ -34,6 +35,8 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
     }
     
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,9 +49,11 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     // complitationで書き直す
     private func getUsers() {
+        SVProgressHUD.showWithStatus("Loading...")
         ApiFetcher().getUsers { (responseObject: NSDictionary?, error:NSError?) -> Void in
             self.programs = responseObject!["result"] as! NSArray
             self.tableView.reloadData()
+            SVProgressHUD.dismiss()
         }
     }
     
