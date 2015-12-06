@@ -22,7 +22,7 @@ class WeekProgram: UIViewController, UITableViewDelegate, UITableViewDataSource 
         getUsers()
         
         self.navigationController?.navigationBarHidden = false
-                self.navigationController?.navigationBar.barTintColor = UIColor.gn_blackColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor.gn_blackColor()
         self.navigationController?.navigationBar.tintColor = UIColor.gn_yellowColor()
         self.view.backgroundColor = UIColor.gn_blackColor()
         // tableView設定

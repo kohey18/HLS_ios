@@ -24,6 +24,8 @@
 		5420BBE71C00E9B300294D99 /* UIColor+GNChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */; };
 		54565B271C14914800BC2425 /* BroadCastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565B261C14914800BC2425 /* BroadCastViewController.m */; };
 		54565B291C14921A00BC2425 /* BroadCastView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54565B281C14921A00BC2425 /* BroadCastView.storyboard */; };
+		54565B2D1C14DD1100BC2425 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54565B2C1C14DD1100BC2425 /* LoginView.storyboard */; };
+		54565B311C14DD3F00BC2425 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54565B301C14DD3F00BC2425 /* LoginViewController.swift */; };
 		549961DF1C02F6400096D65D /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549961DE1C02F6400096D65D /* AVPlayerView.swift */; };
 		549961E51C02FDF00096D65D /* WeekProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549961E41C02FDF00096D65D /* WeekProgram.swift */; };
 		54B3587F1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */; };
@@ -66,6 +68,8 @@
 		54565B251C14914800BC2425 /* BroadCastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroadCastViewController.h; sourceTree = SOURCE_ROOT; };
 		54565B261C14914800BC2425 /* BroadCastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BroadCastViewController.m; sourceTree = SOURCE_ROOT; };
 		54565B281C14921A00BC2425 /* BroadCastView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BroadCastView.storyboard; sourceTree = SOURCE_ROOT; };
+		54565B2C1C14DD1100BC2425 /* LoginView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = SOURCE_ROOT; };
+		54565B301C14DD3F00BC2425 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		549961DE1C02F6400096D65D /* AVPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = SOURCE_ROOT; };
 		549961E41C02FDF00096D65D /* WeekProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekProgram.swift; sourceTree = SOURCE_ROOT; };
 		54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryBoard.swift"; sourceTree = SOURCE_ROOT; };
@@ -109,6 +113,7 @@
 		5420BBB11C00D08200294D99 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				54565B2B1C14DCFC00BC2425 /* LoginViewController */,
 				5420BBE01C00E34C00294D99 /* PlayerViewController */,
 				5420BBDE1C00E32000294D99 /* BroadCastViewController */,
 				5420BBDB1C00E2C800294D99 /* WeekViewController */,
@@ -172,6 +177,15 @@
 				5420BBC81C00D1F900294D99 /* ApiFetcher.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		54565B2B1C14DCFC00BC2425 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				54565B2C1C14DD1100BC2425 /* LoginView.storyboard */,
+				54565B301C14DD3F00BC2425 /* LoginViewController.swift */,
+			);
+			name = LoginViewController;
 			sourceTree = "<group>";
 		};
 		54D2F1D41B5A50980085E390 = {
@@ -352,6 +366,7 @@
 				5420BBC11C00D11300294D99 /* video_button.png in Resources */,
 				5420BBDD1C00E2E900294D99 /* WeekView.storyboard in Resources */,
 				5420BBCD1C00D32200294D99 /* Info.plist in Resources */,
+				54565B2D1C14DD1100BC2425 /* LoginView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +442,7 @@
 				5420BBB51C00D0AB00294D99 /* PlayerViewController.swift in Sources */,
 				54D366541C02413B00441D90 /* ProgramTableViewCell.swift in Sources */,
 				54B3587F1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift in Sources */,
+				54565B311C14DD3F00BC2425 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,13 +47,13 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBarHidden = true
     }
     
-        
-    @IBAction func startLive() {
- 
-        let broadCastView = BroadcastViewController()
-        self.navigationController?.presentViewController(broadCastView, animated: true, completion: nil)
-
+    @IBAction func login() {
+        let storyboard = UIStoryboard(name: "LoginView", bundle: nil)
+        let loginViewController = storyboard.instantiateViewControllerWithIdentifier("LoginView")
+        self.navigationController?.pushViewController(loginViewController, animated: true)
     }
+        
+
     
     @IBAction func pushWathBtn() {
         let storyboard = UIStoryboard(name: "WeekView", bundle: nil)

@@ -70,4 +70,21 @@ public class ApiFetcher: NSObject {
             }
         )
     }
+    
+    func login(user: NSDictionary, onCompletion: ServiceResponse) -> Void {
+        self.manager.requestSerializer = serializer
+        let liveUrl:String = "/users/login"
+        self.manager.POST(self.apiRootURL + liveUrl, parameters: user,
+            success: {(operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
+                let responseDict = responseObject as! NSDictionary
+                onCompletion(responseDict, nil)
+            },
+            failure: {(operation: AFHTTPRequestOperation?, error: NSError!) in
+                onCompletion(nil, error)
+            }
+        )
+        
+    }
+    
+
 }
