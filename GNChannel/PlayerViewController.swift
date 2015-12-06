@@ -49,7 +49,8 @@ class PlayerViewController: UIViewController {
         ApiFetcher().getLive(userId, onCompletion: { (responseObject: NSDictionary?, error:NSError?) -> Void in
             let results = responseObject!["result"] as! NSArray
             if (results.count != 0) {
-                if let liveUrl = results[0]["file"] as? NSString {            self.setLive(liveUrl)
+                if let liveUrl = results[0]["file"] as? NSString {
+                    self.setLive(liveUrl)
                 } else {
                     SVProgressHUD.showErrorWithStatus("現在、放映中ではございません。")
                 }

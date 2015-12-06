@@ -44,17 +44,22 @@ class LoginViewController: UIViewController {
             } else {
 
                 if let status = responseObject!["status"] as? Int {
-                    if status != 200 {
-                        SVProgressHUD.showErrorWithStatus("Login Error")
-                    } else {
-                        self.startLive()
+                    if let userId = responseObject!["user_id"] as? NSString {
+                        if status != 200 {
+                            SVProgressHUD.showErrorWithStatus("Login Error")
+                        } else {
+                            let ud = NSUserDefaults.standardUserDefaults()
+                            ud.setValue(userId, forKey: "userId")
+                            ud.synchronize()
+                            self.startLive(userId)
+                        }
                     }
                 }
             }
         })
     }
     
-    func startLive() {
+    func startLive(userId: NSString) {
         
         let broadCastView = BroadcastViewController()
         self.navigationController?.presentViewController(broadCastView, animated: true, completion: nil)

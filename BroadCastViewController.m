@@ -317,12 +317,24 @@
         NSLog(@"Stream is ready at URL: %@", recorder.stream.streamURL);
         ApiFetcher *fetch = [[ApiFetcher alloc]init];
         // [TODO] 保存したユーザIDでpostする
-        NSDictionary *dic = @{
-                              @"file": recorder.stream.streamURL.absoluteString,
-                              @"thumbnail": recorder.stream.thumbnailURL.absoluteString,
-                              @"user_id": @"test"
-                              };
-        [fetch postLive:dic];
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        NSString *userId = [ud stringForKey:@"userId"];
+        
+        if (userId == NULL) {
+            [SVProgressHUD showErrorWithStatus:@"useIdが無効です。もう一度ログインしてください。"];
+            [self dismissViewControllerAnimated:YES completion:nil];
+            
+        } else {
+            NSDictionary *dic = @{
+                                  @"file": recorder.stream.streamURL.absoluteString,
+                                  @"thumbnail": recorder.stream.thumbnailURL.absoluteString,
+                                  @"user_id": userId
+                                  };
+            [fetch postLive:dic];
+            
+        }
+        
+
     }
 
 }
