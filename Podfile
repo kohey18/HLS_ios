@@ -9,3 +9,4 @@ platform :ios, "8.0"
 pod 'Kickflip'
 #pod 'Kickflip', git: 'https://github.com/kohey18/kickflip-ios-sdk', :tag => '1.4'
 pod 'Bolts'
+pod 'SVProgressHUD'

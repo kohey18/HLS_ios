@@ -25,14 +25,14 @@
 
 @property (strong, nonatomic) UIView *cameraView;
 @property (nonatomic, strong) UIButton *shareButton;
-@property (nonatomic, strong) UILabel *timerLabel;
+@property (nonatomic, strong) UILabel *remainTimerLabel;
 @property (nonatomic, strong) KFRecordButton *recordButton;
 @property (nonatomic, strong) UIImageView *liveBanner;
 
 @property (nonatomic, strong) KFRecorder *recorder;
 @property (nonatomic, strong) NSURL *shareURL;
 
-@property (nonatomic, strong) UILabel *rotationLabel;
+//@property (nonatomic, strong) UILabel *rotationLabel;
 @property (nonatomic, strong) UIImageView *rotationImageView;
 @property (nonatomic, strong) UIButton *cancelButton;
 

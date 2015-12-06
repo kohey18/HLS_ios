@@ -12,6 +12,7 @@
 #import "KFUser.h"
 #import "KFLog.h"
 #import "PureLayout.h"
+#import "SVProgressHUD.h"
 #import "GNChannel-Swift.h"
 
 @implementation BroadcastViewController
@@ -70,19 +71,6 @@
     [self.view addConstraint:constraint];
 }
 
-- (void) setupRotationLabel {
-    self.rotationLabel = [[UILabel alloc] init];
-    self.rotationLabel.text = @"Rotate Device to Begin";
-    self.rotationLabel.textAlignment = NSTextAlignmentCenter;
-    self.rotationLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17.0f];
-    self.rotationLabel.textColor = [UIColor whiteColor];
-    self.rotationLabel.shadowColor = [UIColor blackColor];
-    self.rotationLabel.shadowOffset = CGSizeMake(0, -1);
-    self.rotationLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.rotationLabel];
-    [self.rotationLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.rotationImageView withOffset:10.0f];
-    [self.rotationLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
-}
 
 - (void) setupRotationImageView {
     self.rotationImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KFDeviceRotation"]];
@@ -101,16 +89,22 @@
 
 
 - (void) recordButtonPressed:(id)sender {
-    self.recordButton.enabled = NO;
-    self.cancelButton.enabled = NO;
-    [UIView animateWithDuration:0.2 animations:^{
-        self.cancelButton.alpha = 0.0f;
-    }];
-    if (!self.recorder.isRecording) {
-        [self.recorder startRecording];
+    BOOL isStart = [self checkStartTime];
+    if (!isStart) {
+        [SVProgressHUD showErrorWithStatus:@"23:00〜 開始時間だよ"];
     } else {
-        [self.recorder stopRecording];
+        self.recordButton.enabled = NO;
+        self.cancelButton.enabled = NO;
+        [UIView animateWithDuration:0.2 animations:^{
+            self.cancelButton.alpha = 0.0f;
+        }];
+        if (!self.recorder.isRecording) {
+            [self.recorder startRecording];
+        } else {
+            [self.recorder stopRecording];
+        }
     }
+
 }
 
 - (void) shareButtonPressed:(id)sender {
@@ -134,7 +128,22 @@
     [self setupRecordButton];
     [self setupCancelButton];
     [self setupRotationImageView];
-    [self setupRotationLabel];
+    [self setupTimerLabel];
+}
+
+- (void) setupTimerLabel {
+    self.remainTimerLabel = [[UILabel alloc] init];
+    self.remainTimerLabel.text = [NSString stringWithFormat:@"%d", _remainTime];
+    self.remainTimerLabel.textAlignment = NSTextAlignmentCenter;
+    self.remainTimerLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:40.0f];
+    self.remainTimerLabel.textColor = [UIColor whiteColor];
+    self.remainTimerLabel.shadowColor = [UIColor blackColor];
+    self.remainTimerLabel.shadowOffset = CGSizeMake(0, -1);
+    self.remainTimerLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.remainTimerLabel];
+    [self.remainTimerLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.rotationImageView withOffset:10.0f];
+    [self.remainTimerLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+
 }
 
 - (void) setupTimer {
@@ -144,18 +153,42 @@
                                                      userInfo:nil
                                                       repeats:YES];
     
-    [_countdownTimer fire];
-    
 }
 
 - (void) countDown {
-    if (_remainTime <= 0.0) {
-        [_countdownTimer invalidate];
-        [self.recorder stopRecording];
+    if (self.recorder.isRecording) {
+        if (_remainTime <= 0.0) {
+            [_countdownTimer invalidate];
+            if (self.recorder.isRecording) {
+                [self.recorder stopRecording];
+            }
+        }
+        else {
+            _remainTime--;
+            self.remainTimerLabel.text = [NSString stringWithFormat:@"%d", _remainTime];
+        }
     }
-    else {
-        _remainTime--;
+    [self checkStartTime];
+}
+
+- (BOOL) checkStartTime {
+    NSDate *now = [NSDate date];
+    //NSDateFormatterは取得した時間を文字列に変換するクラス
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComps = [calendar components: NSCalendarUnitYear | NSCalendarUnitMonth  | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond fromDate:now];
+
+    if ((long)dateComps.hour == 23) {
+        return YES;
+    } else {
+        return NO;
     }
+}
+
++ (BOOL)date:(NSDate*)date isBetweenDate:(NSDate*)beginDate andDate:(NSDate*)endDate
+{
+    
+    
+    return YES;
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -199,7 +232,7 @@
         [UIView animateWithDuration:0.2 animations:^{
             //self.shareButton.alpha = 0.0f;
             self.recordButton.alpha = 0.0f;
-            self.rotationLabel.alpha = 1.0f;
+            self.remainTimerLabel.alpha = 0.0f;
             self.rotationImageView.alpha = 1.0f;
         } completion:NULL];
     } else {
@@ -209,7 +242,7 @@
                 //self.shareButton.alpha = 1.0f;
             }
             self.recordButton.alpha = 1.0f;
-            self.rotationLabel.alpha = 0.0f;
+            self.remainTimerLabel.alpha = 1.0f;
             self.rotationImageView.alpha = 0.0f;
         } completion:NULL];
     }
@@ -256,7 +289,9 @@
 
 - (void) recorderDidStartRecording:(KFRecorder *)recorder error:(NSError *)error {
     self.recordButton.enabled = YES;
+    [self.countdownTimer fire];
     if (error) {
+        [self.countdownTimer invalidate];
         DDLogError(@"Error starting stream: %@", error.userInfo);
         NSDictionary *response = [error.userInfo objectForKey:@"response"];
         NSString *reason = nil;
