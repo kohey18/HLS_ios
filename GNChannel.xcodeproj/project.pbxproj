@@ -22,11 +22,11 @@
 		5420BBDD1C00E2E900294D99 /* WeekView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBDC1C00E2E900294D99 /* WeekView.storyboard */; };
 		5420BBE41C00E38F00294D99 /* PlayerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5420BBE31C00E38F00294D99 /* PlayerView.storyboard */; };
 		5420BBE71C00E9B300294D99 /* UIColor+GNChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */; };
+		54565B271C14914800BC2425 /* BroadCastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565B261C14914800BC2425 /* BroadCastViewController.m */; };
+		54565B291C14921A00BC2425 /* BroadCastView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54565B281C14921A00BC2425 /* BroadCastView.storyboard */; };
 		549961DF1C02F6400096D65D /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549961DE1C02F6400096D65D /* AVPlayerView.swift */; };
 		549961E51C02FDF00096D65D /* WeekProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549961E41C02FDF00096D65D /* WeekProgram.swift */; };
-		54A2A7451C019F8D001C6BA7 /* BroadCastView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54A2A7441C019F8D001C6BA7 /* BroadCastView.storyboard */; };
 		54B3587F1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */; };
-		54B358811C018F6F00A5DDA9 /* BroadCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */; };
 		54D2F2071B5A57400085E390 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D2F2061B5A57400085E390 /* AVKit.framework */; };
 		54D366521C02408E00441D90 /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D366511C02408E00441D90 /* ProgramTableViewCell.xib */; };
 		54D366541C02413B00441D90 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D366531C02413B00441D90 /* ProgramTableViewCell.swift */; };
@@ -63,11 +63,12 @@
 		5420BBDC1C00E2E900294D99 /* WeekView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WeekView.storyboard; sourceTree = SOURCE_ROOT; };
 		5420BBE31C00E38F00294D99 /* PlayerView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlayerView.storyboard; sourceTree = SOURCE_ROOT; };
 		5420BBE61C00E9B300294D99 /* UIColor+GNChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+GNChannel.swift"; sourceTree = SOURCE_ROOT; };
+		54565B251C14914800BC2425 /* BroadCastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroadCastViewController.h; sourceTree = SOURCE_ROOT; };
+		54565B261C14914800BC2425 /* BroadCastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BroadCastViewController.m; sourceTree = SOURCE_ROOT; };
+		54565B281C14921A00BC2425 /* BroadCastView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BroadCastView.storyboard; sourceTree = SOURCE_ROOT; };
 		549961DE1C02F6400096D65D /* AVPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = SOURCE_ROOT; };
 		549961E41C02FDF00096D65D /* WeekProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekProgram.swift; sourceTree = SOURCE_ROOT; };
-		54A2A7441C019F8D001C6BA7 /* BroadCastView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BroadCastView.storyboard; sourceTree = SOURCE_ROOT; };
 		54B3587E1C00EDF900A5DDA9 /* UIViewController+StoryBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryBoard.swift"; sourceTree = SOURCE_ROOT; };
-		54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BroadCastViewController.swift; sourceTree = SOURCE_ROOT; };
 		54D2F1DD1B5A50980085E390 /* GNChannel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GNChannel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D2F1F21B5A50980085E390 /* GNChannel.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNChannel.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D2F2061B5A57400085E390 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
@@ -139,8 +140,9 @@
 		5420BBDE1C00E32000294D99 /* BroadCastViewController */ = {
 			isa = PBXGroup;
 			children = (
-				54B358801C018F6F00A5DDA9 /* BroadCastViewController.swift */,
-				54A2A7441C019F8D001C6BA7 /* BroadCastView.storyboard */,
+				54565B251C14914800BC2425 /* BroadCastViewController.h */,
+				54565B261C14914800BC2425 /* BroadCastViewController.m */,
+				54565B281C14921A00BC2425 /* BroadCastView.storyboard */,
 			);
 			name = BroadCastViewController;
 			sourceTree = "<group>";
@@ -340,7 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5420BBBD1C00D10000294D99 /* Images.xcassets in Resources */,
-				54A2A7451C019F8D001C6BA7 /* BroadCastView.storyboard in Resources */,
+				54565B291C14921A00BC2425 /* BroadCastView.storyboard in Resources */,
 				5420BBC31C00D14D00294D99 /* Info.plist in Resources */,
 				54D366521C02408E00441D90 /* ProgramTableViewCell.xib in Resources */,
 				5420BBE41C00E38F00294D99 /* PlayerView.storyboard in Resources */,
@@ -416,9 +418,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5420BBB71C00D0B900294D99 /* HomeViewController.swift in Sources */,
-				54B358811C018F6F00A5DDA9 /* BroadCastViewController.swift in Sources */,
 				5420BBB01C00D07500294D99 /* AppDelegate.swift in Sources */,
 				549961DF1C02F6400096D65D /* AVPlayerView.swift in Sources */,
+				54565B271C14914800BC2425 /* BroadCastViewController.m in Sources */,
 				549961E51C02FDF00096D65D /* WeekProgram.swift in Sources */,
 				5420BBE71C00E9B300294D99 /* UIColor+GNChannel.swift in Sources */,
 				5420BBC91C00D1F900294D99 /* ApiFetcher.swift in Sources */,
