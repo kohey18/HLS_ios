@@ -47,51 +47,12 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBarHidden = true
     }
     
-    
-    /*
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        performSegueWithIdentifier("playerView", sender: nil)
-    }*/
-    
+        
     @IBAction func startLive() {
-        /*
-        let storyboard = UIStoryboard(name: "BroadCastView", bundle: nil)
-        let broadCastViewController = storyboard.instantiateViewControllerWithIdentifier("BroadCastView")
-        self.navigationController?.pushViewController(broadCastViewController, animated: true)
-        */
-        /*
-        [Kickflip presentBroadcasterFromViewController:self ready:^(KFStream *stream) {
-        if (stream.streamURL) {
-        NSLog(@"Stream is ready at URL: %@", stream.streamURL);
-        }
-        } completion:^(BOOL success, NSError* error){
-        if (!success) {
-        NSLog(@"Error setting up stream: %@", error);
-        } else {
-        NSLog(@"Done broadcasting");
-        }
-        }];
-        */
-        Kickflip.presentBroadcasterFromViewController(self, ready: { stream in
-            let mStream = stream
-            if mStream.streamURL != nil {
-                print("Stream is ready at URL: %@", mStream.streamURL.absoluteString);
-                let dic: NSDictionary =
-                [
-                    "file": mStream.streamURL,
-                    "thumbnail": mStream.thumbnailURL,
-                ]
-                ApiFetcher().postLive(dic)
-            } else {
-                print("error")
-            }
-            }, completion: { success, error in
-                if error != nil {
-                    print("Error setup stream")
-                } else {
-                    print("DONE boardcasting")
-                }
-        })
+ 
+        let broadCastView = BroadcastViewController()
+        self.navigationController?.presentViewController(broadCastView, animated: true, completion: nil)
+
     }
     
     @IBAction func pushWathBtn() {
