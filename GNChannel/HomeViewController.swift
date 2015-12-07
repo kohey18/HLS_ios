@@ -78,3 +78,15 @@ class HomeViewController: UIViewController {
     }
     
 }
+
+extension UINavigationController {
+    public override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    public override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        let orientation: UIInterfaceOrientationMask = [UIInterfaceOrientationMask.Portrait]
+        return orientation
+    }
+    
+}
