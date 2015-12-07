@@ -323,7 +323,7 @@
 				TargetAttributes = {
 					54D2F1DC1B5A50980085E390 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = QD9NJK6ZP2;
+						DevelopmentTeam = J59975K9H9;
 					};
 					54D2F1F11B5A50980085E390 = {
 						CreatedOnToolsVersion = 6.4;
@@ -566,13 +566,13 @@
 			baseConfigurationReference = 41DD77745378F90FD07399D9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kohei Kawai (8NT7CPTX98)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kohei Kawai (8NT7CPTX98)";
 				INFOPLIST_FILE = GNChannel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GNChannel;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "47b121da-cf5d-410f-8114-aff9b6fc67c3";
 				SWIFT_OBJC_BRIDGING_HEADER = "GNChannel/GNChannel-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "GNChannel/GNChannel-Bridging-Header.h";
 			};
@@ -583,13 +583,13 @@
 			baseConfigurationReference = DC182099446FD94F055E167A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Kohei Kawai (J59975K9H9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kohei Kawai (J59975K9H9)";
 				INFOPLIST_FILE = GNChannel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GNChannel;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "ce75dda7-8977-40b5-9491-563048c67509";
 				SWIFT_OBJC_BRIDGING_HEADER = "GNChannel/GNChannel-Bridging-Header.h";
 			};
 			name = Release;
