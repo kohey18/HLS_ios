@@ -73,7 +73,8 @@
 
 
 - (void) setupRotationImageView {
-    self.rotationImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KFDeviceRotation"]];
+    //self.rotationImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KFDeviceRotation"]];
+    self.rotationImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"rotationImg"]];
     self.rotationImageView.translatesAutoresizingMaskIntoConstraints = NO;
     self.rotationImageView.transform = CGAffineTransformMakeRotation(90./180.*M_PI);
     [self.view addSubview:self.rotationImageView];

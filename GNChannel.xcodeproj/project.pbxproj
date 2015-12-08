@@ -32,6 +32,7 @@
 		54D2F2071B5A57400085E390 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D2F2061B5A57400085E390 /* AVKit.framework */; };
 		54D366521C02408E00441D90 /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D366511C02408E00441D90 /* ProgramTableViewCell.xib */; };
 		54D366541C02413B00441D90 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D366531C02413B00441D90 /* ProgramTableViewCell.swift */; };
+		54DD66D71C168FB40025B03D /* rotationImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DD66D61C168FB40025B03D /* rotationImg@2x.png */; };
 		9E3675C8A7E703CCB9E7CA08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3640DDEB0325AD4886D6F7 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		54D2F2061B5A57400085E390 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		54D366511C02408E00441D90 /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		54D366531C02413B00441D90 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		54DD66D61C168FB40025B03D /* rotationImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rotationImg@2x.png"; sourceTree = SOURCE_ROOT; };
 		DC182099446FD94F055E167A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 				54565B251C14914800BC2425 /* BroadCastViewController.h */,
 				54565B261C14914800BC2425 /* BroadCastViewController.m */,
 				54565B281C14921A00BC2425 /* BroadCastView.storyboard */,
+				54DD66D61C168FB40025B03D /* rotationImg@2x.png */,
 			);
 			name = BroadCastViewController;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				5420BBBF1C00D10C00294D99 /* logo_oyasumich.png in Resources */,
 				5420BBC11C00D11300294D99 /* video_button.png in Resources */,
 				5420BBDD1C00E2E900294D99 /* WeekView.storyboard in Resources */,
+				54DD66D71C168FB40025B03D /* rotationImg@2x.png in Resources */,
 				5420BBCD1C00D32200294D99 /* Info.plist in Resources */,
 				54565B2D1C14DD1100BC2425 /* LoginView.storyboard in Resources */,
 			);
@@ -589,7 +593,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GNChannel;
-				PROVISIONING_PROFILE = "ce75dda7-8977-40b5-9491-563048c67509";
+				PROVISIONING_PROFILE = "888b800a-477e-464d-b8c4-63af38bd937e";
 				SWIFT_OBJC_BRIDGING_HEADER = "GNChannel/GNChannel-Bridging-Header.h";
 			};
 			name = Release;
