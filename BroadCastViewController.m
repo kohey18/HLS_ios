@@ -181,7 +181,7 @@
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSString *userId = [ud stringForKey:@"userId"];
     
-    if ([userId  isEqual: @"test"]) {
+    if ([userId  rangeOfString: @"test"].location != NSNotFound) {
         return YES;
     }
     
