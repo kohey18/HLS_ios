@@ -102,7 +102,7 @@
         if (!self.recorder.isRecording) {
             [self.recorder startRecording];
         } else {
-            [self.recorder stopRecording];
+            [self stopLive];
         }
     }
 
@@ -161,7 +161,7 @@
         if (_remainTime <= 0.0) {
             [_countdownTimer invalidate];
             if (self.recorder.isRecording) {
-                [self.recorder stopRecording];
+                [self stopLive];
             }
         }
         else {
@@ -170,6 +170,19 @@
         }
     }
     [self checkStartTime];
+}
+
+- (void) stopLive {
+    [SVProgressHUD showWithStatus:@"Loading...." maskType:SVProgressHUDMaskTypeGradient];
+    [self.recorder stopRecording];
+    [NSTimer scheduledTimerWithTimeInterval:7 target:self
+                                   selector:@selector(stopAnimating:) userInfo:nil repeats:NO];
+
+}
+
+//SVProgressHUDを止める
+-(void)stopAnimating:(NSTimer*)timer {
+    [SVProgressHUD dismiss];
 }
 
 - (BOOL) checkStartTime {
@@ -355,6 +368,7 @@
             _completionBlock(YES, nil);
         }
     }
+    [SVProgressHUD dismiss];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
