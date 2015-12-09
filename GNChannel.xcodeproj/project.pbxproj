@@ -593,7 +593,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = GNChannel;
-				PROVISIONING_PROFILE = "9c04875c-6e05-49e3-96ad-0c063eae3065";
+				PROVISIONING_PROFILE = "63a5a5e6-26eb-48c3-a09c-590db07343a0";
 				SWIFT_OBJC_BRIDGING_HEADER = "GNChannel/GNChannel-Bridging-Header.h";
 			};
 			name = Release;
